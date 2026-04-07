@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+sources/private/
+drafts/
+.pytest_cache/
