@@ -1,9 +1,12 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-04-07
 source_refs:
   - private/work-email-1.md
   - private/work-email-2.md
   - private/work-strategy-1.md
+  - private/mc4b-update-1.md
+  - private/mc4b-update-2.md
+  - private/mc4b-q2-poa.md
 ---
 
 # Communication Preferences
@@ -24,12 +27,14 @@ Direct, conversational, specific. Uses real names, links, and concrete details r
 Aaron writes regular monthly product update emails to the broader team. The pattern is consistent:
 
 **Structure:**
-- Opens with "Hey folks," — casual, warm
-- Lead paragraph summarizes the month's big story (1-2 sentences with specific metrics)
-- "What else happened" section with bolded sub-headers per initiative
+- Opens with "Hey all," or "Hey folks," — casual, warm
+- Lead paragraph summarizes the month's big story (1-2 sentences). Early updates may be narrative-heavy; sets expectations that future updates will become more metric-driven as real numbers come in.
+- "What we're doing" section re-states the product vision in 2-3 sentences (consistent across updates so new readers can jump in)
+- "[Month] Updates" section with bolded sub-headers per initiative
 - Each initiative gets 2-4 bullet points with metrics and links
-- "What's next" section previewing upcoming month
-- Closes with "Until next month, Aaron"
+- "What's happening this month" section previewing upcoming work
+- "How you can help" closing section — specific, actionable asks (introductions, naming feedback, etc.)
+- Closes with "Until next month, Aaron" (or omitted in early updates)
 
 **Tone:**
 - Authoritative but approachable. Writing as a product leader to peers, not a VP to reports.
@@ -41,7 +46,7 @@ Aaron writes regular monthly product update emails to the broader team. The patt
 - Numbers everywhere. Downloads, adoption rates, GMV, percentage changes.
 - Uses "thus far" regularly as a time marker.
 - Italicized sub-headers for initiative names within sections.
-- Ends with a call to action: "hit us up in #product with questions or ideas."
+- Ends with a call to action: "hit us up in #product with questions or ideas" or a "How you can help" section with specific asks.
 
 ## Strategic Communication (Product Ethos)
 
@@ -54,9 +59,24 @@ When communicating strategic direction or change, Aaron's style shifts:
 - Balances honesty about uncertainty ("It's an open question") with clarity about what IS decided.
 - Uses bold themed titles for strategic pillars: "Stronger together, not apart," "Back to Basics," "Time for a bigger boat."
 
-## Documentation & PRDs
+## Planning Documents (POAs, PRDs)
 
-Creates detailed PRDs and go-to-market plans. Uses data, customer quotes, and prototypes to make the case. Shares broadly across the company to align teams.
+Creates detailed quarterly plans (POAs) and PRDs. Consistent structure:
+
+**Structure:**
+- Opens with an overview paragraph stating what the document covers and its draft status
+- "How we see this setting us up for success" section — connects quarterly work to a longer-term milestone (e.g., "beta product ready in advance of Summit in September")
+- Numbered priorities with nested explanations — each priority gets a one-liner summary of what it means in practice
+- "Blockers / Dependencies" section with detailed nested bullets spelling out specific technical and organizational requirements
+- "Not in scope" section — explicitly calls out what's excluded and why
+- "Open Questions / Action Items" section at the end
+
+**Tone:**
+- More structured than updates, but still conversational. Uses "we" naturally.
+- Honest about uncertainty — "This is still very much in flux but it's a helpful baseline" and "This is interesting for us but may not end up being something we can accomplish."
+- Specific about technical requirements in blockers — lists exact capabilities needed rather than vague concerns.
+
+Also creates go-to-market plans. Uses data, customer quotes, and prototypes to make the case. Shares broadly across the company to align teams.
 
 ## Presentations
 
