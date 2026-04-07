@@ -19,14 +19,14 @@ python server.py
 
 ### Add to Claude Code
 
-Add to `~/.claude/settings.json`:
+Add to `~/.claude/.mcp.json`:
 
 ```json
 {
   "mcpServers": {
     "personal-context": {
-      "command": "python",
-      "args": ["/absolute/path/to/personal-context/server.py"]
+      "command": "/path/to/personal-context/.venv/bin/python",
+      "args": ["/path/to/personal-context/server.py"]
     }
   }
 }
