@@ -33,7 +33,7 @@ Daily briefing agent that pulls weather + RSS feeds and posts to Discord. Explor
 - Repo: github.com/amr05008/scheduled-agents
 
 ### Monthly Finances
-Local scheduled agent: drop CSVs, run tally.py, generate a Notion page with spending insights and breakdown. Tracks emergency fund (VUSXX, target $40k) and 529 contributions (target $4k/year).
+Local scheduled agent: drop CSVs, run tally.py, generate a Notion page with spending insights and breakdown. Tracks emergency fund and 529 contributions.
 
 ## Notable Past Projects
 

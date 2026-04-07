@@ -23,7 +23,9 @@ def create_server(context_dir: Path | None = None) -> FastMCP:
         Available files: identity.md, writing-style.md, opinions.md,
         expertise.md, projects.md, communication.md
         """
-        path = context_dir / filename
+        path = (context_dir / filename).resolve()
+        if not path.is_relative_to(context_dir.resolve()):
+            return "Access denied: path outside context directory"
         if not path.exists():
             available = [f.name for f in context_dir.glob("*.md")]
             return f"File '{filename}' not found. Available: {', '.join(available)}"

@@ -186,6 +186,15 @@ personal-context/
 python -m pytest -v
 ```
 
+## Security
+
+This repo is designed to be public, but you're putting personal information in it. A few things to know:
+
+- **Path traversal protection.** The `get_context` resource handler validates that requested filenames resolve inside the `context/` directory. Traversal attempts like `../../etc/passwd` are rejected.
+- **Private sources are gitignored.** `sources/private/` is in `.gitignore` so work emails, Slack exports, etc. stay local. But be careful with `source_refs` in frontmatter — the filenames are committed even if the files aren't. Use opaque names like `work-email-1.md` instead of descriptive titles.
+- **Review your context files before committing.** These files are meant to be public, but watch for details you didn't intend to share: financial specifics, internal company information, health details, or anything useful for phishing. If in doubt, leave it out.
+- **`.env` is gitignored.** If you extend this with API keys, they won't be committed accidentally.
+
 ## Philosophy
 
 - **Start minimal.** 6 files is enough. Add complexity only when you outgrow it.

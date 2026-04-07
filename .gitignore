@@ -6,3 +6,6 @@ drafts/
 .pytest_cache/
 .DS_Store
 *.egg-info/
+.env
+.env.*
+sources/blogs

@@ -1,9 +1,9 @@
 ---
 last_updated: 2026-04-06
 source_refs:
-  - private/September 2025 Product Email.md
-  - private/November 2025 Product Email.md
-  - private/Product Ethos H2 2024.md
+  - private/work-email-1.md
+  - private/work-email-2.md
+  - private/work-strategy-1.md
 ---
 
 # Communication Preferences

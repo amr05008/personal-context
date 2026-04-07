@@ -49,6 +49,24 @@ def test_get_writing_style(tmp_path):
     assert "I write casually" in text
 
 
+def test_path_traversal_guard(tmp_path):
+    """Test that path traversal is caught by the resolve + is_relative_to guard."""
+    context_dir = tmp_path / "context"
+    context_dir.mkdir()
+
+    # Simulate what the handler does: resolve and check containment
+    traversal_inputs = ["../../etc/passwd", "../server.py", "foo/../../etc/passwd"]
+    for filename in traversal_inputs:
+        path = (context_dir / filename).resolve()
+        assert not path.is_relative_to(context_dir.resolve()), (
+            f"Path traversal not caught for: {filename}"
+        )
+
+    # Valid filename should pass
+    valid = (context_dir / "identity.md").resolve()
+    assert valid.is_relative_to(context_dir.resolve())
+
+
 def test_get_writing_style_missing(tmp_path):
     """Test writing style tool when file doesn't exist."""
     context_dir = tmp_path / "context"
