@@ -84,6 +84,10 @@ A good approach: start a Claude Code session and ask it to interview you. Share 
 
 ### Connect to Claude Code
 
+The MCP server runs **entirely locally** — Claude Code spawns it as a subprocess on your machine, and it just reads markdown files from disk. No data is sent to external services beyond the normal Claude API calls.
+
+The config lives at `~/.claude/.mcp.json`, which is a **user-level** config. This means the tools are available in every Claude Code session on that machine, regardless of which project you're working in.
+
 Add to `~/.claude/.mcp.json` (create the file if it doesn't exist):
 
 ```json
@@ -98,6 +102,17 @@ Add to `~/.claude/.mcp.json` (create the file if it doesn't exist):
 ```
 
 Restart Claude Code. The MCP tools will be available in every session.
+
+### Setting up on another machine
+
+To use the same context on a work machine or second computer:
+
+1. Clone the repo: `git clone <your-fork> personal-context`
+2. Install: `cd personal-context && uv venv && source .venv/bin/activate && uv pip install -e .`
+3. Add the same config block to `~/.claude/.mcp.json` on that machine (update the paths to match where you cloned it)
+4. Restart Claude Code
+
+That's it — same context files, same tools, works in any repo you open. If you keep your context files committed, `git pull` on either machine keeps them in sync.
 
 ### Test it
 
