@@ -143,6 +143,8 @@ This system is manually curated — you update the files, not an automated pipel
 
 Work emails, Slack exports, or other private writing go in `sources/private/` which is gitignored. You can reference them in `source_refs` for provenance without committing the content.
 
+Since `sources/private/` is gitignored, these files are device-specific — they won't sync when you `git pull` on another machine. If you need the same private sources on multiple machines, copy them manually or sync via something outside git (e.g., iCloud, Dropbox).
+
 ### Re-running ingest
 
 If you add new blog posts or writing samples to `sources/blogs/`:
