@@ -1,10 +1,11 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-04-07
 source_refs:
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
   - blogs/vibe-coding-a-tour-de-france-app-using-replit-and-google-sheets.md
   - blogs/experiments-with-strava-mcp.md
+  - blogs/giving-agents-personal-context.md
 ---
 
 # Projects
@@ -25,11 +26,12 @@ Personal blog built with Astro 5, Tailwind CSS, deployed on Vercel. Migrated fro
 - Repo: github.com/amr05008/aaronroy.com
 
 ### Personal Context System
-This system — curated markdown files served via FastMCP MCP server to give LLMs writing context.
-- Repo: personal-context (local)
+Curated markdown files (identity, writing-style, opinions, expertise, projects, communication) served via FastMCP MCP server so any Claude Code session can pull voice, opinions, and style automatically. Inspired by Karpathy's LLM Wiki and nlwhittemore's Personal Context Portfolio. Bootstrapped by ingesting blog posts, then refined through Claude Code interviews. Uses a gitignored `sources/private/` directory for sensitive materials like work emails. Open-source.
+- Repo: github.com/amr05008/personal-context
+- Blog: aaronroy.com/giving-agents-personal-context/
 
 ### Scheduled Agents
-Daily briefing agent that pulls weather + RSS feeds and posts to Discord. Exploring as an alternative to OpenClaw.
+Daily briefing agent that pulls weather + RSS feeds and posts to Discord. Built as an alternative to the OpenClaw agent "King Ziti" — which ran on a Raspberry Pi 5 and handled tasks like researching swimming classes, sending email reports, and managing shared task lists via Discord. King Ziti required "hundreds of hours of tinkering" to maintain. Scheduled Agents aims to replicate those benefits with less overhead by combining with the personal-context system.
 - Repo: github.com/amr05008/scheduled-agents
 
 ### Monthly Finances

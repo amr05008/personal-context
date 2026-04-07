@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-04-07
 source_refs:
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
@@ -8,6 +8,7 @@ source_refs:
   - blogs/reflecting-on-cx-2025.md
   - blogs/experiments-with-strava-mcp.md
   - blogs/unlocking-revenue-with-product-led-growth.md
+  - blogs/giving-agents-personal-context.md
 ---
 
 # Writing Style

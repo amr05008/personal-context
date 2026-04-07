@@ -1,11 +1,12 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-04-07
 source_refs:
   - blogs/building-products-age-of-ai.md
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
   - blogs/unlocking-revenue-with-product-led-growth.md
   - blogs/useful-and-silly-ways-i-use-chatgpt.md
+  - blogs/giving-agents-personal-context.md
 ---
 
 # Opinions & Perspectives
@@ -17,6 +18,10 @@ source_refs:
 - The prompt is the product. In GlutenOrNot, the real value is in the prompt engineering — encoding celiac disease knowledge, tone, and conservative safety defaults.
 - LLMs are best used as collaborators, not replacements. He uses Claude for planning and doing, ChatGPT for quick lookups and personal tasks. Different tools for different jobs.
 - MCPs (Model Context Protocols) are exciting for connecting LLMs to real data sources. Early adopter — experimented with Strava MCP, built his own.
+- Personal context should be curated markdown, not complex infrastructure. Simple files served via MCP beat heavyweight agent systems that require "hundreds of hours of tinkering."
+- LLMs should know who they're talking to. Equipping agents with your voice, opinions, and expertise makes every session more useful without repeating yourself.
+- The best approach to building personal context is bootstrapping from existing writing (blog posts), then refining through interviews — not starting from scratch.
+- Context systems should be LLM-agnostic. Plans to make personal-context portable across models so switching providers doesn't mean rebuilding.
 
 ## On Product Strategy
 

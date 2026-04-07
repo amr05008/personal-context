@@ -1,11 +1,12 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-04-07
 source_refs:
   - blogs/building-products-age-of-ai.md
   - blogs/unlocking-revenue-with-product-led-growth.md
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/how-we-brought-3dprinteros-to-life.md
   - blogs/3d-printing-101-class.md
+  - blogs/giving-agents-personal-context.md
 ---
 
 # Expertise & Knowledge
@@ -25,7 +26,8 @@ Core professional skill across multiple companies (Bond, Teachable, ManyChat). H
 Active practitioner, not theorist. Uses AI tools daily for building:
 - Claude Code for development — migrations, new projects, debugging
 - Prompt engineering as product logic (GlutenOrNot's celiac knowledge prompt)
-- MCP servers — built personal context MCP, experimented with Strava MCP
+- MCP servers — built and open-sourced personal-context MCP (FastMCP), experimented with Strava MCP
+- Personal context systems — designed a bootstrap workflow (ingest blog posts → interview → refine) for building LLM context from existing writing
 - ChatGPT for personal productivity — recipes, travel planning, tech questions
 - Vibe coding with Replit, Claude Code, and other tools
 
