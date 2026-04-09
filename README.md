@@ -4,6 +4,8 @@ A minimal system for giving LLMs your writing voice, opinions, and style. Curate
 
 Inspired by [Karpathy's LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) and [nlwhittemore's Personal Context Portfolio](https://github.com/nlwhittemore/personal-context-portfolio).
 
+More background on the why behind this project [here](https://aaronroy.com/giving-agents-personal-context/).
+
 ## How It Works
 
 ```
