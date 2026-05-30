@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-07
+last_updated: 2026-05-30
 source_refs:
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
@@ -60,6 +60,9 @@ The patterns above describe this mode. Narrative-driven, detailed, personal.
 
 ### Work contexts (inferred from blog tone)
 Likely more structured but still direct. Uses data and customer feedback to make cases. Comfortable with slide decks and PRDs. "I had to win over hearts and minds" suggests persuasive but not aggressive.
+
+### Social posts (LinkedIn and similar)
+**Teach and give, don't ask for engagement.** Aaron does not want CTAs that invite the audience to comment, react, or "let him know what you think." His close is to hand over something genuinely useful — a repo people can try themselves, a stripped-down version of the deck he presented, or other resources — and let the value speak for itself. This give-without-strings approach reflects his teaching-first ethos and reliably earns engagement on its own without explicitly soliciting it. When drafting a social post, default the ending to "here's something useful, go try it" rather than a question or discussion prompt.
 
 ## Annotated Examples
 
