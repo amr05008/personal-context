@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 sources/private/
+context/private.md
 drafts/
 .pytest_cache/
 .DS_Store

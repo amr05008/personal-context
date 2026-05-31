@@ -151,6 +151,12 @@ Work emails, Slack exports, or other private writing go in `sources/private/` wh
 
 Since `sources/private/` is gitignored, these files are device-specific — they won't sync when you `git pull` on another machine. If you need the same private sources on multiple machines, copy them manually or sync via something outside git (e.g., iCloud, Dropbox).
 
+### Private served context
+
+`sources/private/` holds raw *source material* for ingest — it is **not** read by the MCP at runtime. If you have curated context that the MCP should serve but that must stay out of the public repo (e.g. work-sensitive or moonlighting-adjacent notes), put it in **`context/private.md`**, which is gitignored.
+
+The server globs `context/*.md`, so `context/private.md` is returned by `get_all_context()` and `context://private.md` locally, but git never commits it. Like `sources/private/`, it's device-specific — copy it manually if you run the MCP on another machine.
+
 ### Re-running ingest
 
 If you add new blog posts or writing samples to `sources/blogs/`:
@@ -168,7 +174,7 @@ The server exposes:
 | Tool/Resource | What It Does |
 |--------------|-------------|
 | `get_writing_style()` | Returns your writing-style.md — the most commonly needed file |
-| `get_all_context()` | Returns all 6 context files as a dict |
+| `get_all_context()` | Returns all context files as a dict (includes a local `private.md` if present) |
 | `context://{filename}` | Resource access to any individual file by name |
 
 ## Project Structure
@@ -176,6 +182,7 @@ The server exposes:
 ```
 personal-context/
 ├── context/           # Your curated context files (the product)
+│   └── private.md     # Optional private served context (GITIGNORED)
 ├── sources/
 │   ├── blogs/         # Public writing samples (committed or symlinked)
 │   └── private/       # Private writing samples (GITIGNORED)
@@ -200,6 +207,7 @@ This repo is designed to be public, but remember you are putting personal inform
 
 - **Path traversal protection.** The `get_context` resource handler validates that requested filenames resolve inside the `context/` directory. Traversal attempts like `../../etc/passwd` are rejected.
 - **Private sources are gitignored.** `sources/private/` is in `.gitignore` so work emails, Slack exports, etc. stay local. But be careful with `source_refs` in frontmatter — the filenames are committed even if the files aren't. Use opaque names like `work-email-1.md` instead of descriptive titles.
+- **Private served context is gitignored.** `context/private.md` is in `.gitignore` for curated context the MCP should serve locally but never commit (e.g. work-sensitive notes). It's the runtime-served counterpart to `sources/private/`.
 - **Review your context files before committing.** These files are meant to be public, but watch for details you didn't intend to share: financial specifics, internal company information, health details, or anything useful for phishing. If in doubt, leave it out.
 - **`.env` is gitignored.** If you extend this with API keys, they won't be committed accidentally.
 
