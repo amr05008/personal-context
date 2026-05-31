@@ -66,7 +66,7 @@ If you don't have existing writing to ingest, just create the 6 files in `contex
 
 ```markdown
 ---
-last_updated: 2026-04-06
+last_updated: 2026-05-30
 source_refs: []
 ---
 
@@ -153,7 +153,7 @@ Since `sources/private/` is gitignored, these files are device-specific — they
 
 ### Private served context
 
-`sources/private/` holds raw *source material* for ingest — it is **not** read by the MCP at runtime. If you have curated context that the MCP should serve but that must stay out of the public repo (e.g. work-sensitive or moonlighting-adjacent notes), put it in **`context/private.md`**, which is gitignored.
+`sources/private/` holds raw *source material* for ingest — it is **not** read by the MCP at runtime. If you have curated context that the MCP should serve but that must stay out of a public repo, put it in **`context/private.md`**, which is gitignored.
 
 The server globs `context/*.md`, so `context/private.md` is returned by `get_all_context()` and `context://private.md` locally, but git never commits it. Like `sources/private/`, it's device-specific — copy it manually if you run the MCP on another machine.
 
