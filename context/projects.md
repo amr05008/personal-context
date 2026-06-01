@@ -1,11 +1,12 @@
 ---
-last_updated: 2026-04-07
+last_updated: 2026-06-01
 source_refs:
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
   - blogs/vibe-coding-a-tour-de-france-app-using-replit-and-google-sheets.md
   - blogs/experiments-with-strava-mcp.md
   - blogs/giving-agents-personal-context.md
+  - blogs/how-to-build-a-personal-morning-briefing.md
 ---
 
 # Projects
@@ -34,8 +35,13 @@ Curated markdown files (identity, writing-style, opinions, expertise, projects, 
 Daily briefing agent that pulls weather + RSS feeds and posts to Discord. Built as an alternative to the OpenClaw agent "King Ziti" — which ran on a Raspberry Pi 5 and handled tasks like researching swimming classes, sending email reports, and managing shared task lists via Discord. King Ziti required "hundreds of hours of tinkering" to maintain. Scheduled Agents aims to replicate those benefits with less overhead by combining with the personal-context system.
 - Repo: github.com/amr05008/scheduled-agents
 
+### Daily Briefing
+A Claude Code routine that delivers a personalized morning briefing — local weather with a cyclist's slant (wind conditions) layered with favorite RSS feeds. Runs as a Claude Code routine on Anthropic's cloud (created via the `/schedule` command), so it executes regardless of whether his computer is on — unlike Claude Cowork's Scheduled Tasks, which require the machine to stay active. Aaron taught a hands-on ManyChat workshop on building these (six TAs, exercises following a prompt → sources → schedule → delivery pattern; later exercises layer in connectors like Slack).
+- Repo: github.com/amr05008/daily-briefing
+- Blog: aaronroy.com/how-to-build-a-personal-morning-briefing/
+
 ### Monthly Finances
-Local scheduled agent: drop CSVs, run tally.py, generate a Notion page with spending insights and breakdown. Tracks emergency fund and 529 contributions.
+Automated monthly finance pipeline: **SimpleFin Bridge → SQLite → Claude → Notion**. Runs unattended on macOS `launchd` schedules — a daily pull + LLM categorization (Claude Sonnet 4.6, with a forever merchant cache), a monthly report on the 1st that synthesizes spending insights (Claude Opus 4.8) into a Notion page, and a weekly healthcheck that catches stale/frozen bank feeds. Discord pings on failures. Replaced the legacy `tally.py` + CSV-drop workflow and has been the only pipeline since the May 2026 auto-run. Tracks category budgets, an emergency-fund target, and 529 contributions (sensitive config kept gitignored).
 
 ## Notable Past Projects
 
