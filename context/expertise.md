@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-07
+last_updated: 2026-06-01
 source_refs:
   - blogs/building-products-age-of-ai.md
   - blogs/unlocking-revenue-with-product-led-growth.md
@@ -7,6 +7,7 @@ source_refs:
   - blogs/how-we-brought-3dprinteros-to-life.md
   - blogs/3d-printing-101-class.md
   - blogs/giving-agents-personal-context.md
+  - blogs/how-to-build-a-personal-morning-briefing.md
 ---
 
 # Expertise & Knowledge
@@ -30,6 +31,7 @@ Active practitioner, not theorist. Uses AI tools daily for building:
 - Personal context systems — designed a bootstrap workflow (ingest blog posts → interview → refine) for building LLM context from existing writing
 - ChatGPT for personal productivity — recipes, travel planning, tech questions
 - Vibe coding with Replit, Claude Code, and other tools
+- Scheduled AI agents — Claude Code routines (cloud-run via `/schedule`) and Claude Cowork Scheduled Tasks for automated briefings; taught a hands-on ManyChat workshop on building them
 
 ## Chatbot & Messaging Platforms (Professional)
 
@@ -65,7 +67,7 @@ Teachable experience gives insight into:
 Not an engineer, but builds and ships:
 - Astro static sites (aaronroy.com)
 - React Native mobile apps (GlutenOrNot)
-- Python scripts and automation (scheduled-agents, ingest tools)
+- Python scripts and automation (ingest tools, scheduled `launchd` pipelines with SQLite + LLM categorization, e.g. the SimpleFin → SQLite → Claude → Notion finance pipeline)
 - Streamlit apps (fantasy Tour de France)
 - WordPress migrations, deployment (Vercel)
 

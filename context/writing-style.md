@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-07
+last_updated: 2026-06-01
 source_refs:
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
@@ -9,9 +9,7 @@ source_refs:
   - blogs/experiments-with-strava-mcp.md
   - blogs/unlocking-revenue-with-product-led-growth.md
   - blogs/giving-agents-personal-context.md
-  - private/mc4b-update-1.md
-  - private/mc4b-update-2.md
-  - private/mc4b-q2-poa.md
+  - blogs/how-to-build-a-personal-morning-briefing.md
 ---
 
 # Writing Style
@@ -61,11 +59,11 @@ Aaron writes in a **conversational, first-person voice** that reads like he's ta
 ### Blog posts (primary voice)
 The patterns above describe this mode. Narrative-driven, detailed, personal.
 
-### Work updates (confirmed from internal writing)
-Conversational but structured. Opens with "Hey all," and a one-line summary of the month. Re-states the product vision each update so new readers have context. Uses bolded section headers, bullet points with inline links, and closes with a "How you can help" section. Tone is warmer than blog posts — more collaborative, directly addressing the reader ("If you think there is anyone I should talk to... please let me know"). Comfortable setting expectations ("heavy on words vs actual metrics but over the next ~2-3 months expect these to be much more metric driven").
+### Work contexts (inferred from blog tone)
+Likely more structured but still direct. Uses data and customer feedback to make cases. Comfortable with slide decks and PRDs. "I had to win over hearts and minds" suggests persuasive but not aggressive.
 
-### Strategic planning docs
-More structured, less narrative. Uses numbered priorities with nested explanations, explicit scope/non-scope sections, and detailed blockers spelled out as specific capabilities needed. Still conversational — hedges honestly ("may not end up being something we can accomplish") rather than overpromising. Uses "we" naturally throughout.
+### Social posts (LinkedIn and similar)
+**Teach and give, don't ask for engagement.** Aaron does not want CTAs that invite the audience to comment, react, or "let him know what you think." His close is to hand over something genuinely useful — a repo people can try themselves, a stripped-down version of the deck he presented, or other resources — and let the value speak for itself. This give-without-strings approach reflects his teaching-first ethos and reliably earns engagement on its own without explicitly soliciting it. When drafting a social post, default the ending to "here's something useful, go try it" rather than a question or discussion prompt.
 
 ## Annotated Examples
 

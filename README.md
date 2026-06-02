@@ -4,6 +4,8 @@ A minimal system for giving LLMs your writing voice, opinions, and style. Curate
 
 Inspired by [Karpathy's LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) and [nlwhittemore's Personal Context Portfolio](https://github.com/nlwhittemore/personal-context-portfolio).
 
+More background on the why behind this project [here](https://aaronroy.com/giving-agents-personal-context/).
+
 ## How It Works
 
 ```
@@ -64,7 +66,7 @@ If you don't have existing writing to ingest, just create the 6 files in `contex
 
 ```markdown
 ---
-last_updated: 2026-04-06
+last_updated: 2026-05-30
 source_refs: []
 ---
 
@@ -127,7 +129,7 @@ In a new Claude Code session:
 
 ## Adding Context Over Time
 
-This system is manually curated — you update the files, not an automated pipeline.
+This system is manually curated, you update the files, this is not an automated pipeline.
 
 ### When to update
 
@@ -149,6 +151,12 @@ Work emails, Slack exports, or other private writing go in `sources/private/` wh
 
 Since `sources/private/` is gitignored, these files are device-specific — they won't sync when you `git pull` on another machine. If you need the same private sources on multiple machines, copy them manually or sync via something outside git (e.g., iCloud, Dropbox).
 
+### Private served context
+
+`sources/private/` holds raw *source material* for ingest — it is **not** read by the MCP at runtime. If you have curated context that the MCP should serve but that must stay out of a public repo, put it in **`context/private.md`**, which is gitignored.
+
+The server globs `context/*.md`, so `context/private.md` is returned by `get_all_context()` and `context://private.md` locally, but git never commits it. Like `sources/private/`, it's device-specific — copy it manually if you run the MCP on another machine.
+
 ### Re-running ingest
 
 If you add new blog posts or writing samples to `sources/blogs/`:
@@ -166,7 +174,7 @@ The server exposes:
 | Tool/Resource | What It Does |
 |--------------|-------------|
 | `get_writing_style()` | Returns your writing-style.md — the most commonly needed file |
-| `get_all_context()` | Returns all 6 context files as a dict |
+| `get_all_context()` | Returns all context files as a dict (includes a local `private.md` if present) |
 | `context://{filename}` | Resource access to any individual file by name |
 
 ## Project Structure
@@ -174,6 +182,7 @@ The server exposes:
 ```
 personal-context/
 ├── context/           # Your curated context files (the product)
+│   └── private.md     # Optional private served context (GITIGNORED)
 ├── sources/
 │   ├── blogs/         # Public writing samples (committed or symlinked)
 │   └── private/       # Private writing samples (GITIGNORED)
@@ -194,16 +203,17 @@ python -m pytest -v
 
 ## Security
 
-This repo is designed to be public, but you're putting personal information in it. A few things to know:
+This repo is designed to be public, but remember you are putting personal information in it. A few things to know:
 
 - **Path traversal protection.** The `get_context` resource handler validates that requested filenames resolve inside the `context/` directory. Traversal attempts like `../../etc/passwd` are rejected.
 - **Private sources are gitignored.** `sources/private/` is in `.gitignore` so work emails, Slack exports, etc. stay local. But be careful with `source_refs` in frontmatter — the filenames are committed even if the files aren't. Use opaque names like `work-email-1.md` instead of descriptive titles.
+- **Private served context is gitignored.** `context/private.md` is in `.gitignore` for curated context the MCP should serve locally but never commit (e.g. work-sensitive notes). It's the runtime-served counterpart to `sources/private/`.
 - **Review your context files before committing.** These files are meant to be public, but watch for details you didn't intend to share: financial specifics, internal company information, health details, or anything useful for phishing. If in doubt, leave it out.
 - **`.env` is gitignored.** If you extend this with API keys, they won't be committed accidentally.
 
 ## Philosophy
 
-- **Start minimal.** 6 files is enough. Add complexity only when you outgrow it.
+- **Start minimal.** 6 files was enough for me as a starting point. Add complexity only when you outgrow it.
 - **Curate manually.** You know your voice better than any automated pipeline. The LLM can help draft, but you decide what stays.
 - **Iterate from use.** The best edits come from noticing when the LLM gets something wrong about your writing.
 - **Keep private things private.** The `sources/private/` directory exists so you can reference work writing without committing it.

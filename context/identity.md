@@ -1,9 +1,10 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-06-01
 source_refs:
   - blogs/building-products-age-of-ai.md
   - blogs/the-twisting-tale-of-our-handwriting-robots.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
+  - blogs/how-to-build-a-personal-morning-briefing.md
 ---
 
 # Identity
@@ -36,3 +37,4 @@ Product person by trade — not an engineer, but increasingly technical through 
 - Prefers async collaboration over meetings
 - Gravitates toward product-led growth over sales-led approaches
 - Resourceful — drove a Penske truck to Tennessee to rescue robots from a landfill rather than let them be scrapped
+- Teaching-driven — sees teaching as one of his favorite ways to explore a topic deeply, runs hands-on workshops (e.g. a ManyChat morning-briefing session), and imagines becoming a professor as one idealized future path
