@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-01
+last_updated: 2026-06-15
 source_refs:
   - blogs/building-products-age-of-ai.md
   - blogs/the-twisting-tale-of-our-handwriting-robots.md
@@ -17,8 +17,8 @@ Aaron Roy. Based in Brooklyn, New York. Born in 1987. Married, with a daughter b
 
 Product person by trade — not an engineer, but increasingly technical through AI tooling.
 
-- **ManyChat** (current) — Remote product role at a chatbot/messaging automation platform
-- **Teachable** (previous) — Product role at the online course platform (pre-ManyChat)
+- **Manychat** (current) — Product Director, building Manychat for Brands. The leading chat marketing / messaging automation platform. Remote role
+- **Teachable** (previous) — Product role at the online course platform (pre-Manychat)
 - **Bond / Wami** — Joined Bond (robotic handwritten notes) post-acquisition by Newell Brands. Built out product-led growth that added $1M+ in revenue. When Newell shut Bond down, co-founded Wami to acquire the handwriting robots and run a seasonal luxury brand note-sending business out of Bushwick
 - **3D Printing** — Earlier career involved 3D printing at scale, managing fleets of printers, teaching, and exploring manufacturing applications
 
@@ -37,4 +37,4 @@ Product person by trade — not an engineer, but increasingly technical through 
 - Prefers async collaboration over meetings
 - Gravitates toward product-led growth over sales-led approaches
 - Resourceful — drove a Penske truck to Tennessee to rescue robots from a landfill rather than let them be scrapped
-- Teaching-driven — sees teaching as one of his favorite ways to explore a topic deeply, runs hands-on workshops (e.g. a ManyChat morning-briefing session), and imagines becoming a professor as one idealized future path
+- Teaching-driven — sees teaching as one of his favorite ways to explore a topic deeply, runs hands-on workshops (e.g. a Manychat morning-briefing session), and imagines becoming a professor as one idealized future path

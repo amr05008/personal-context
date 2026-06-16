@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-01
+last_updated: 2026-06-15
 source_refs:
   - blogs/building-products-age-of-ai.md
   - blogs/unlocking-revenue-with-product-led-growth.md
@@ -14,7 +14,7 @@ source_refs:
 
 ## Product Management (Deep)
 
-Core professional skill across multiple companies (Bond, Teachable, ManyChat). Hands-on experience with:
+Core professional skill across multiple companies (Bond, Teachable, Manychat). Hands-on experience with:
 - Product-led growth (PLG) — designed and shipped self-service features that generated $1M+ revenue
 - User research and prototyping — runs customer interviews, builds InVision/Figma prototypes, tests with users
 - PRDs, go-to-market plans, stakeholder buy-in presentations
@@ -31,11 +31,11 @@ Active practitioner, not theorist. Uses AI tools daily for building:
 - Personal context systems — designed a bootstrap workflow (ingest blog posts → interview → refine) for building LLM context from existing writing
 - ChatGPT for personal productivity — recipes, travel planning, tech questions
 - Vibe coding with Replit, Claude Code, and other tools
-- Scheduled AI agents — Claude Code routines (cloud-run via `/schedule`) and Claude Cowork Scheduled Tasks for automated briefings; taught a hands-on ManyChat workshop on building them
+- Scheduled AI agents — Claude Code routines (cloud-run via `/schedule`) and Claude Cowork Scheduled Tasks for automated briefings; taught a hands-on Manychat workshop on building them
 
 ## Chatbot & Messaging Platforms (Professional)
 
-Current work at ManyChat. Understands:
+Current work at Manychat. Understands:
 - Messaging automation platforms
 - Chat-based customer engagement
 - Bot-building workflows and user experience

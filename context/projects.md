@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-01
+last_updated: 2026-06-15
 source_refs:
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
@@ -13,8 +13,8 @@ source_refs:
 
 ## Active Projects
 
-### ManyChat (Work)
-Product role at ManyChat, a chatbot/messaging automation platform. Remote position.
+### Manychat (Work)
+Product Director at Manychat, a chatbot/messaging automation (chat marketing) platform. Currently building Manychat for Brands. Remote position.
 
 ### GlutenOrNot
 Free ingredient scanner for celiac disease. Web (PWA) + iOS app. Takes a photo of an ingredient label, uses Google Cloud Vision OCR + Claude for analysis, returns safe/caution/unsafe verdict. No accounts, no subscriptions, no tracking. Built in under a week with Aaron Batchelder.
@@ -36,7 +36,7 @@ Daily briefing agent that pulls weather + RSS feeds and posts to Discord. Built 
 - Repo: github.com/amr05008/scheduled-agents
 
 ### Daily Briefing
-A Claude Code routine that delivers a personalized morning briefing — local weather with a cyclist's slant (wind conditions) layered with favorite RSS feeds. Runs as a Claude Code routine on Anthropic's cloud (created via the `/schedule` command), so it executes regardless of whether his computer is on — unlike Claude Cowork's Scheduled Tasks, which require the machine to stay active. Aaron taught a hands-on ManyChat workshop on building these (six TAs, exercises following a prompt → sources → schedule → delivery pattern; later exercises layer in connectors like Slack).
+A Claude Code routine that delivers a personalized morning briefing — local weather with a cyclist's slant (wind conditions) layered with favorite RSS feeds. Runs as a Claude Code routine on Anthropic's cloud (created via the `/schedule` command), so it executes regardless of whether his computer is on — unlike Claude Cowork's Scheduled Tasks, which require the machine to stay active. Aaron taught a hands-on Manychat workshop on building these (six TAs, exercises following a prompt → sources → schedule → delivery pattern; later exercises layer in connectors like Slack).
 - Repo: github.com/amr05008/daily-briefing
 - Blog: aaronroy.com/how-to-build-a-personal-morning-briefing/
 
