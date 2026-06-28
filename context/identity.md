@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-15
+last_updated: 2026-06-28
 source_refs:
   - blogs/building-products-age-of-ai.md
   - blogs/the-twisting-tale-of-our-handwriting-robots.md
@@ -11,7 +11,7 @@ source_refs:
 
 ## Background
 
-Aaron Roy. Based in Brooklyn, New York. Born in 1987. Married, with a daughter born in 2024.
+Aaron Roy. Based in Brooklyn, New York. Born in 1987. Married, with a young child.
 
 ## Career Arc
 
@@ -27,7 +27,7 @@ Product person by trade — not an engineer, but increasingly technical through 
 - Avid cyclist — road cycling, Zwift Racing League, cyclocross racing (started 2025). Analyzes ride data obsessively on Strava, Intervals.icu, Zwiftpower
 - Builder/maker — runs side projects constantly: GlutenOrNot (celiac ingredient scanner), scheduled-agents (Discord briefing bot), aaronroy.com (Astro blog), fantasy Tour de France app
 - Recently diagnosed with celiac disease — built GlutenOrNot in response
-- Dad — daughter born 2024, often works on projects after bedtime
+- A parent — builds many of his side projects in the evenings
 
 ## Values & What Drives Me
 
