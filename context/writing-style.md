@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-01
+last_updated: 2026-06-29
 source_refs:
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
@@ -10,6 +10,8 @@ source_refs:
   - blogs/unlocking-revenue-with-product-led-growth.md
   - blogs/giving-agents-personal-context.md
   - blogs/how-to-build-a-personal-morning-briefing.md
+  - blogs/go-get-yourself-a-personal-agent.md
+  - blogs/glutenornot-redesign.md
 ---
 
 # Writing Style
@@ -25,7 +27,7 @@ Aaron writes in a **conversational, first-person voice** that reads like he's ta
 
 ## Sentence Patterns
 
-- **Opens with personal context.** Posts almost always start with "I recently..." or a personal situation that led to the project. The reader gets the "why" before the "what."
+- **Opens with personal context.** Posts almost always start with "I recently..." or a personal situation that led to the project. The reader gets the "why" before the "what." (Exception: advisory/recommendation posts lead with the thesis instead — "I think you should build a personal agent." — then back it with personal stakes in the next sentence.)
 - **Short declarative sentences mixed with longer flowing ones.** "The app works. It's in the App Store. Here's what might come next:" followed by longer explanation.
 - **Uses parenthetical asides** to add color or clarification: "(yes, Josten's, the yearbook company)", "(vibe coding = instructing AI agents to write code)".
 - **Rhetorical momentum through progression.** He narrates projects chronologically — the problem, what he tried, what happened, what's next. Like a story, not a tutorial.
@@ -81,3 +83,13 @@ Likely more structured but still direct. Uses data and customer feedback to make
 > "After the ink dried on our contract with Newell to purchase the assets, we flew down to Nashville, rented a 26-foot Penske truck, and got to work."
 
 **Why this works:** You can see the story. "26-foot Penske truck" is a specific detail that makes it real. The sentence moves forward — signed, flew, rented, worked. No filler.
+
+### Example 4: Leading with the recommendation (advisory posts)
+> "I think you should build a personal agent. Out of all the fun and wild stuff I've explored this past year personal agents are the most useful, the most interesting and now the foundation I layer new projects on top of."
+
+**Why this works:** When the post is advice rather than a project story, he flips the usual order — the thesis comes first ("I think you should build a personal agent"), then the personal stakes back it up. Direct second-person, no hedging, but credibility lands immediately because the next sentence is grounded in his own experience ("this past year," "I layer new projects on top of").
+
+### Example 5: Self-deprecating specificity
+> "While the prior version worked, it looked like a health app from 2014. Teal everywhere, a generic leaf logo, and the scan verdict crammed into a little pill."
+
+**Why this works:** The criticism is aimed at his own earlier work, which makes it disarming rather than harsh. And it's vivid because it's specific — "a health app from 2014," "teal everywhere," "crammed into a little pill" — not a vague "it looked dated." Concrete details do the work of the judgment.

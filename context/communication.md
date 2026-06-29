@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-07
+last_updated: 2026-06-29
 source_refs:
   - private/work-email-1.md
   - private/work-email-2.md
@@ -89,3 +89,15 @@ Comfortable presenting. Spoke at NYU's Product Management Club about building pr
 - Shared principles over shared process. Aligns on values, then works independently.
 - Uses CLAUDE.md and project documentation to maintain continuity across sessions.
 - Expects to "connect on Friday as a group to discuss" — uses written communication to set context before synchronous meetings.
+
+## How We Work Together (AI Agents)
+
+Preferences for how Aaron likes AI agents to operate in a working session. (The sections above describe outbound communication style; this is about working mode.)
+
+- **Bias toward action.** When there's enough to act on, act — don't survey options you won't pursue or re-litigate settled decisions. Lead with the recommendation, not an exhaustive menu.
+- **Understand before changing.** Read the relevant code/context first; for anything non-trivial, get the lay of the land before editing.
+- **Direct and honest.** Push back when something's wrong, risky, or overcomplicated. Report outcomes faithfully — if a test failed or a step was skipped, say so plainly. No flattery.
+- **Concise and scannable.** Short, structured answers. Skip preamble and filler.
+- **Ship fast, stay simple.** Prefer the smallest version that works; add complexity only when warranted. Be conservative on anything safety-, health-, or money-adjacent.
+- **Match the voice.** Before drafting any written content, pull personal-context (`get_writing_style` / `get_all_context`). For social posts, teach and give — no engagement-bait CTAs.
+- **Default public, route sensitive to private.** New context is public by default, but anything work-sensitive or moonlighting-adjacent goes in `context/private.md` (gitignored). When in doubt, leave it out.

@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-28
+last_updated: 2026-06-29
 source_refs:
   - blogs/building-products-age-of-ai.md
   - blogs/the-twisting-tale-of-our-handwriting-robots.md
@@ -12,6 +12,14 @@ source_refs:
 ## Background
 
 Aaron Roy. Based in Brooklyn, New York. Born in 1987. Married, with a young child.
+
+## Links
+
+- Website / blog: https://aaronroy.com
+- LinkedIn: https://www.linkedin.com/in/aaronmichaelroy/
+- X / Twitter: https://x.com/aaron_wa
+- YouTube: https://www.youtube.com/@aaron_wa
+- GitHub: https://github.com/amr05008
 
 ## Career Arc
 
