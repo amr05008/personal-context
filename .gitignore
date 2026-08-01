@@ -11,3 +11,4 @@ drafts/
 .env
 .env.*
 sources/blogs
+.playwright-mcp/
