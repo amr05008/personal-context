@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-29
+last_updated: 2026-08-01
 source_refs:
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
@@ -12,6 +12,7 @@ source_refs:
   - blogs/how-to-build-a-personal-morning-briefing.md
   - blogs/go-get-yourself-a-personal-agent.md
   - blogs/glutenornot-redesign.md
+  - blogs/what-i-look-for-in-product-managers-now.md
 ---
 
 # Writing Style
@@ -64,6 +65,16 @@ The patterns above describe this mode. Narrative-driven, detailed, personal.
 ### Work contexts (inferred from blog tone)
 Likely more structured but still direct. Uses data and customer feedback to make cases. Comfortable with slide decks and PRDs. "I had to win over hearts and minds" suggests persuasive but not aggressive.
 
+### Advisory posts about work and career
+When the subject is his profession rather than a side project, a few extra moves show up:
+
+- **Names the genre and the audience early.** "Consider this post an open letter to product managers looking for their next role..." The reader knows what they're reading and whether it's for them within the first few paragraphs.
+- **Establishes standing, then disclaims it.** "I'm writing this as someone who hires and mentors product managers, so this comes from my experience and perspective. This is my opinion and not the official position of my employer (Manychat) so do with this information what you will." Credibility first, then explicit separation from the employer — include this disclaimer whenever a post draws on his work at Manychat.
+- **States the through-line before the sections start.** Usually a one-sentence more-X-less-Y contrast: "more time spent on learning, shipping and interacting with customers, and less time spent on copying and pasting information between tools."
+- **Every section ends with a way in.** Each recommendation is followed by a concrete starter project and a link — the teaching-first, give-without-strings instinct applied section by section, not just at the end.
+- **Blunt judgments stay soft.** "If you say you are a builder and have no commits in the past 12 months on GitHub, that's a yellow flag." A yellow flag, not a dealbreaker.
+- **Closes with an open door, not a CTA.** "feel free to email me" — offering his own time is consistent with the no-engagement-bait rule below, not an exception to it.
+
 ### Social posts (LinkedIn and similar)
 **Teach and give, don't ask for engagement.** Aaron does not want CTAs that invite the audience to comment, react, or "let him know what you think." His close is to hand over something genuinely useful — a repo people can try themselves, a stripped-down version of the deck he presented, or other resources — and let the value speak for itself. This give-without-strings approach reflects his teaching-first ethos and reliably earns engagement on its own without explicitly soliciting it. When drafting a social post, default the ending to "here's something useful, go try it" rather than a question or discussion prompt.
 
@@ -93,3 +104,8 @@ Likely more structured but still direct. Uses data and customer feedback to make
 > "While the prior version worked, it looked like a health app from 2014. Teal everywhere, a generic leaf logo, and the scan verdict crammed into a little pill."
 
 **Why this works:** The criticism is aimed at his own earlier work, which makes it disarming rather than harsh. And it's vivid because it's specific — "a health app from 2014," "teal everywhere," "crammed into a little pill" — not a vague "it looked dated." Concrete details do the work of the judgment.
+
+### Example 6: Lowering the barrier before the close (advisory posts)
+> "**It's totally okay if you don't know how to do some of these items today.** You absolutely can learn them and be up to speed in no-time if you start exploring and experimenting. [...] We are all still figuring out how to adjust to this rapidly changing world."
+
+**Why this works:** After a post full of things the reader might not know how to do, the bolded reassurance arrives before they can feel behind. "We are all still figuring out" puts him in the same boat rather than above it — he's giving standards without making them a judgment. Then he hands over an ordered first step so "you can learn this" comes with somewhere to actually start.

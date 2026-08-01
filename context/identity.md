@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-29
+last_updated: 2026-08-01
 source_refs:
   - blogs/building-products-age-of-ai.md
   - blogs/the-twisting-tale-of-our-handwriting-robots.md
@@ -35,6 +35,7 @@ Product person by trade — not an engineer, but increasingly technical through 
 
 - Avid cyclist — road cycling, Zwift Racing League, cyclocross racing (started 2025). Analyzes ride data obsessively on Strava, Intervals.icu, Zwiftpower
 - Builder/maker — runs side projects constantly: GlutenOrNot (celiac ingredient scanner), scheduled-agents (Discord briefing bot), aaronroy.com (Astro blog), fantasy Tour de France app
+- Runs a YouTube channel (launched July 2026) showing how he builds those side projects with Claude Code, agents, and MCPs
 - Recently diagnosed with celiac disease — built GlutenOrNot in response
 - A parent — builds many of his side projects in the evenings
 

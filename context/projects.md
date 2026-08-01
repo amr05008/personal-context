@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-15
+last_updated: 2026-08-01
 source_refs:
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
@@ -39,6 +39,9 @@ Daily briefing agent that pulls weather + RSS feeds and posts to Discord. Built 
 A Claude Code routine that delivers a personalized morning briefing — local weather with a cyclist's slant (wind conditions) layered with favorite RSS feeds. Runs as a Claude Code routine on Anthropic's cloud (created via the `/schedule` command), so it executes regardless of whether his computer is on — unlike Claude Cowork's Scheduled Tasks, which require the machine to stay active. Aaron taught a hands-on Manychat workshop on building these (six TAs, exercises following a prompt → sources → schedule → delivery pattern; later exercises layer in connectors like Slack).
 - Repo: github.com/amr05008/daily-briefing
 - Blog: aaronroy.com/how-to-build-a-personal-morning-briefing/
+
+### YouTube Channel
+Launched July 2026 at youtube.com/@aaron_wa. Mostly hands-on walkthroughs of how he actually builds his side projects — Claude Code, agents, and MCPs — with the occasional cyclocross or Zwift race video. Early videos cover setting up a note-taking project in GitHub, building an interactive prototype with Claude Design and Claude Code, and getting started with Kimi K3. The intended format: open by showing the finished thing working, and close on a give (a repo or writeup) rather than a subscribe ask or a comment prompt.
 
 ### Monthly Finances
 Automated monthly finance pipeline: **SimpleFin Bridge → SQLite → Claude → Notion**. Runs unattended on macOS `launchd` schedules — a daily pull + LLM categorization (Claude Sonnet 4.6, with a forever merchant cache), a monthly report on the 1st that synthesizes spending insights (Claude Opus 4.8) into a Notion page, and a weekly healthcheck that catches stale/frozen bank feeds. Discord pings on failures. Replaced the legacy `tally.py` + CSV-drop workflow and has been the only pipeline since the May 2026 auto-run. Tracks category budgets, an emergency-fund target, and 529 contributions (sensitive config kept gitignored).

@@ -1,12 +1,13 @@
 ---
-last_updated: 2026-06-29
+last_updated: 2026-08-01
 source_refs:
+  - blogs/what-i-look-for-in-product-managers-now.md
   - private/work-email-1.md
   - private/work-email-2.md
   - private/work-strategy-1.md
-  - private/mc4b-update-1.md
-  - private/mc4b-update-2.md
-  - private/mc4b-q2-poa.md
+  - private/work-product-update-1.md
+  - private/work-product-update-2.md
+  - private/work-quarterly-plan-1.md
 ---
 
 # Communication Preferences
@@ -38,26 +39,26 @@ Aaron writes regular monthly product update emails to the broader team. The patt
 
 **Tone:**
 - Authoritative but approachable. Writing as a product leader to peers, not a VP to reports.
-- Celebrates wins with data, not superlatives. "Smashed its soft launch goal of 1k downloads, achieving ~1.7k+" rather than "amazing success."
-- Uses customer quotes and specific school names to ground abstract progress.
+- Celebrates wins with data, not superlatives. States the actual metric against the goal it beat, rather than reaching for words like "amazing success."
+- Uses customer quotes and named accounts to ground abstract progress.
 - Links heavily — to changelogs, presentations, Jira, Google Docs.
 
 **Patterns:**
 - Numbers everywhere. Downloads, adoption rates, GMV, percentage changes.
 - Uses "thus far" regularly as a time marker.
 - Italicized sub-headers for initiative names within sections.
-- Ends with a call to action: "hit us up in #product with questions or ideas" or a "How you can help" section with specific asks.
+- Ends with a call to action — an open invitation to reply in the team's channel, or a "How you can help" section with specific asks.
 
 ## Strategic Communication (Product Ethos)
 
 When communicating strategic direction or change, Aaron's style shifts:
 
-- Opens with historical context to ground the message. "Over the past 7 years, we've helped 150,000+ creators earn over $2 billion dollars."
-- Directly acknowledges uncomfortable truths. "We repeatedly tried to stay as separate as possible... created our own strategies, made duplicative mistakes."
+- Opens with historical context to ground the message — years of track record and cumulative customer outcomes, stated as concrete figures rather than adjectives.
+- Directly acknowledges uncomfortable truths, including past organizational missteps, in plain language rather than euphemism.
 - Sets clear principles, not just tasks. Three principles, each one sentence.
 - Uses Q&A format for anticipated concerns. Structures the doc as "questions we imagine you have" with direct answers.
 - Balances honesty about uncertainty ("It's an open question") with clarity about what IS decided.
-- Uses bold themed titles for strategic pillars: "Stronger together, not apart," "Back to Basics," "Time for a bigger boat."
+- Uses bold themed titles for strategic pillars — short, memorable phrases, often a metaphor or a call back to fundamentals, rather than descriptive labels.
 
 ## Planning Documents (POAs, PRDs)
 
@@ -65,7 +66,7 @@ Creates detailed quarterly plans (POAs) and PRDs. Consistent structure:
 
 **Structure:**
 - Opens with an overview paragraph stating what the document covers and its draft status
-- "How we see this setting us up for success" section — connects quarterly work to a longer-term milestone (e.g., "beta product ready in advance of Summit in September")
+- "How we see this setting us up for success" section — connects quarterly work to a longer-term milestone (e.g. a beta ready ahead of a major company event)
 - Numbered priorities with nested explanations — each priority gets a one-liner summary of what it means in practice
 - "Blockers / Dependencies" section with detailed nested bullets spelling out specific technical and organizational requirements
 - "Not in scope" section — explicitly calls out what's excluded and why
@@ -81,6 +82,15 @@ Also creates go-to-market plans. Uses data, customer quotes, and prototypes to m
 ## Presentations
 
 Comfortable presenting. Spoke at NYU's Product Management Club about building products in the age of AI. Uses slides with key points, follows up with detailed blog writeups.
+
+## Speaking Publicly About Work
+
+Aaron writes publicly about product work while holding a full-time role.
+
+- **His opinions are his own, not his employer's.** Any post drawing on his work carries an explicit disclaimer — "This is my opinion and not the official position of my employer (Manychat)." He states it plainly rather than leaving it ambiguous.
+- **Teach the transferable lesson.** When writing about ways of working, abstract up to the general principle so a reader can apply it anywhere, independent of where he happened to learn it.
+
+Further constraints on work-related content are in `private.md`.
 
 ## Collaboration Preferences
 
