@@ -155,7 +155,16 @@ Since `sources/private/` is gitignored, these files are device-specific — they
 
 `sources/private/` holds raw *source material* for ingest — it is **not** read by the MCP at runtime. If you have curated context that the MCP should serve but that must stay out of a public repo, put it in **`context/private.md`**, which is gitignored.
 
-The server globs `context/*.md`, so `context/private.md` is returned by `get_all_context()` and `context://private.md` locally, but git never commits it. Like `sources/private/`, it's device-specific — copy it manually if you run the MCP on another machine.
+The server globs `context/*.md`, so **any** gitignored file you add there (e.g. `context/private.md`, `context/travel.md`) is returned by `get_all_context()` and served locally, but git never commits it. Like `sources/private/`, these are device-specific — copy them manually (or symlink them from a private repo) if you run the MCP on another machine.
+
+Two things to know about this pattern:
+
+- **Never put example/placeholder versions of private files in `context/`** — the glob would serve them to the model as if they were real. Public examples belong elsewhere, e.g. `docs/`.
+- **A symlink works.** If you keep the real file in a private repo (for backup/sync), symlink it into `context/` — the server follows symlinks, and `.gitignore` keeps the link out of the public repo.
+
+### Travel profile
+
+An example of the private-served-context pattern: a durable travel profile (home airport, airline status, hard rules, output contract) so an agent planning a trip never starts cold. See [`docs/travel.example.md`](docs/travel.example.md) for the shape with placeholder values. The real one lives at `context/travel.md` (gitignored); loyalty account numbers stay in a password manager — the file points at where they live, it never stores digits.
 
 ### Re-running ingest
 
@@ -182,7 +191,10 @@ The server exposes:
 ```
 personal-context/
 ├── context/           # Your curated context files (the product)
-│   └── private.md     # Optional private served context (GITIGNORED)
+│   ├── private.md     # Optional private served context (GITIGNORED)
+│   └── travel.md      # Optional travel profile, may be a symlink (GITIGNORED)
+├── docs/
+│   └── travel.example.md  # Public placeholder example (kept OUT of context/)
 ├── sources/
 │   ├── blogs/         # Public writing samples (committed or symlinked)
 │   └── private/       # Private writing samples (GITIGNORED)
@@ -207,7 +219,8 @@ This repo is designed to be public, but remember you are putting personal inform
 
 - **Path traversal protection.** The `get_context` resource handler validates that requested filenames resolve inside the `context/` directory. Traversal attempts like `../../etc/passwd` are rejected.
 - **Private sources are gitignored.** `sources/private/` is in `.gitignore` so work emails, Slack exports, etc. stay local. But be careful with `source_refs` in frontmatter — the filenames are committed even if the files aren't. Use opaque names like `work-email-1.md` instead of descriptive titles.
-- **Private served context is gitignored.** `context/private.md` is in `.gitignore` for curated context the MCP should serve locally but never commit (e.g. work-sensitive notes). It's the runtime-served counterpart to `sources/private/`.
+- **Private served context is gitignored.** `context/private.md` and `context/travel.md` are in `.gitignore` for curated context the MCP should serve locally but never commit (e.g. work-sensitive notes, travel preferences). They're the runtime-served counterpart to `sources/private/`. Keep placeholder examples of these files out of `context/` entirely — the server would serve them as real context.
+- **Account numbers never go in served context.** Loyalty programs, traveler numbers, and similar identifiers stay in a password manager; context files may point at where they live but never contain the digits. An agent doesn't need them to plan, and you do the booking yourself.
 - **Review your context files before committing.** These files are meant to be public, but watch for details you didn't intend to share: financial specifics, internal company information, health details, or anything useful for phishing. If in doubt, leave it out.
 - **`.env` is gitignored.** If you extend this with API keys, they won't be committed accidentally.
 
