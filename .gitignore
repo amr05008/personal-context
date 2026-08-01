@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 sources/private/
 context/private.md
+context/travel.md
 drafts/
 .pytest_cache/
 .DS_Store
