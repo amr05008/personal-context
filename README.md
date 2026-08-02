@@ -143,7 +143,9 @@ This system is manually curated, you update the files, this is not an automated 
 1. Edit the relevant `context/*.md` file directly
 2. Update the `last_updated` date in frontmatter
 3. Add any new source refs to `source_refs`
-4. Commit
+4. Re-read the **whole file**, not just your changes — see [Security](#security). Context files accumulate, so the risk is usually something added long ago and never re-read. When you find something, paraphrase rather than delete: the point being illustrated almost always survives, and the specifics are what create the exposure.
+5. Check sibling files for contradictions. `get_all_context()` returns them together, so removing a claim from one file while another still asserts it produces an inconsistent picture.
+6. Commit
 
 ### Private sources
 
