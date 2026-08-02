@@ -136,7 +136,7 @@ This system is manually curated, you update the files, this is not an automated 
 - **After publishing new writing** — review if it reveals patterns not yet captured in `writing-style.md`
 - **After changing jobs/projects** — update `projects.md` and `identity.md`
 - **After noticing the LLM gets your voice wrong** — the gap between output and expectation tells you what's missing
-- **After adding new source material** — drop files in `sources/private/` (gitignored) or `sources/blogs/`, re-run ingest if helpful
+- **After adding new source material** — drop files in `sources/private/` or `sources/blogs/` (both gitignored), re-run ingest if helpful
 
 ### How to update
 
@@ -198,7 +198,7 @@ personal-context/
 ├── docs/
 │   └── travel.example.md  # Public placeholder example (kept OUT of context/)
 ├── sources/
-│   ├── blogs/         # Public writing samples (committed or symlinked)
+│   ├── blogs/         # Writing samples for ingest (GITIGNORED — symlink or copy)
 │   └── private/       # Private writing samples (GITIGNORED)
 ├── scripts/
 │   └── ingest.py      # Bootstrap drafts from existing writing
@@ -211,7 +211,10 @@ personal-context/
 
 ## Running Tests
 
+`pytest` is an optional `dev` dependency, so install it before the first run:
+
 ```bash
+uv sync --extra dev      # or: pip install -e ".[dev]"
 python -m pytest -v
 ```
 
