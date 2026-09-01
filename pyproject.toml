@@ -22,3 +22,6 @@ personal-context = "personal_context.cli:main"
 
 [tool.setuptools]
 packages = ["personal_context"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
