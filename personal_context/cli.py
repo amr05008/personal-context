@@ -24,10 +24,18 @@ class CLIError(Exception):
     """An error that should be reported without a traceback."""
 
 
+def _context_dir_type(value: str) -> Path:
+    # An empty value would resolve to the current directory and make a
+    # misconfigured pipeline look like an empty-but-valid context dir.
+    if not value:
+        raise argparse.ArgumentTypeError("context directory must not be empty")
+    return Path(value)
+
+
 def _add_context_dir_argument(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--context-dir",
-        type=Path,
+        type=_context_dir_type,
         default=argparse.SUPPRESS,
         help=(
             "directory containing context Markdown files; overrides "
@@ -177,6 +185,8 @@ def _run(args: argparse.Namespace, parser: argparse.ArgumentParser) -> str:
 
     if args.command == "list":
         filenames = _available_documents(context_dir, args.include_private)
+        if not filenames:
+            raise CLIError(f"no context documents found in {context_dir}")
         return "".join(f"{filename}\n" for filename in filenames)
 
     if args.all and args.names:

@@ -54,7 +54,7 @@ uv run personal-context list
 
 ### Local CLI
 
-The dependency-free CLI path reads Markdown from disk; it does not start MCP, make network calls, or require credentials.
+The CLI module is standard-library-only and reads Markdown from disk; it does not start MCP, make network calls, or require credentials. (Installing the project still pulls the MCP server's dependencies — the CLI just never imports them.)
 
 ```bash
 personal-context list
@@ -71,7 +71,7 @@ personal-context get private --include-private
 personal-context list --include-private
 ```
 
-Names may be supplied with or without `.md`. Multi-document output is Markdown with a source filename heading and separator for each document. Paths and nested names are rejected; the CLI cannot be used to traverse outside `context/`.
+Names may be supplied with or without `.md`. Multi-document output is Markdown with a source filename heading and separator for each document. Paths and nested names are rejected, so document *names* cannot traverse outside the context directory. (Symlinks deliberately placed inside `context/` — like a vault-managed `travel.md` — are followed, and `--context-dir` can point anywhere; both are intentional.)
 
 By default the command resolves `context/` relative to the installed project, so it works from any current working directory. Override it when using another context checkout:
 

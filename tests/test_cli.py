@@ -176,6 +176,27 @@ def test_environment_override_and_flag_precedence(tmp_path, monkeypatch, capsys)
     assert (code, stdout, stderr) == (0, "from flag\n", "")
 
 
+def test_list_with_no_documents_is_an_error(tmp_path, capsys):
+    empty_dir = tmp_path / "empty"
+    empty_dir.mkdir()
+
+    code, stdout, stderr = run_cli(
+        capsys, "list", "--context-dir", str(empty_dir)
+    )
+
+    assert code == 1
+    assert stdout == ""
+    assert "no context documents found" in stderr
+
+
+def test_empty_context_dir_flag_is_rejected(context_dir, capsys):
+    code, stdout, stderr = run_cli(capsys, "list", "--context-dir", "")
+
+    assert code == 2
+    assert stdout == ""
+    assert "must not be empty" in stderr
+
+
 def test_invalid_combination_uses_stderr_and_nonzero_exit(context_dir, capsys):
     code, stdout, stderr = run_cli(
         capsys,
