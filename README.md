@@ -10,9 +10,10 @@ More background on the why behind this project [here](https://aaronroy.com/givin
 
 ```
 context/*.md  →  FastMCP server  →  MCP  →  Claude Code (or any MCP client)
+             ↘ personal-context CLI → Pi (or any shell-capable agent)
 ```
 
-You maintain 6 markdown files about yourself. A FastMCP server exposes them as tools. When you ask an LLM to write something, it can pull your context and match your voice.
+You maintain 6 markdown files about yourself. The FastMCP server and local CLI read those same files directly. When you ask an LLM to write something, it can pull your context and match your voice.
 
 ### The 6 Context Files
 
@@ -43,6 +44,48 @@ cd personal-context
 uv venv && source .venv/bin/activate
 uv pip install -e ".[dev]"
 ```
+
+The editable install is intentional: the installed command always reads the live `context/` directory in this clone. With a synced uv project, it also runs naturally as:
+
+```bash
+uv sync --extra dev
+uv run personal-context list
+```
+
+### Local CLI
+
+The dependency-free CLI path reads Markdown from disk; it does not start MCP, make network calls, or require credentials.
+
+```bash
+personal-context list
+personal-context get writing-style
+personal-context get identity projects
+personal-context get --all
+personal-context get --all --include-private
+```
+
+`list` and `get --all` use only the six curated documents in the table above. Arbitrary extra files—including gitignored `private.md` and `travel.md`—are excluded unless `--include-private` is explicit. An explicitly named extra file is also gated, for example:
+
+```bash
+personal-context get private --include-private
+personal-context list --include-private
+```
+
+Names may be supplied with or without `.md`. Multi-document output is Markdown with a source filename heading and separator for each document. Paths and nested names are rejected; the CLI cannot be used to traverse outside `context/`.
+
+By default the command resolves `context/` relative to the installed project, so it works from any current working directory. Override it when using another context checkout:
+
+```bash
+PERSONAL_CONTEXT_DIR=/path/to/context personal-context list
+personal-context --context-dir /path/to/context get identity
+# --context-dir is also accepted after the subcommand.
+```
+
+Precedence is `--context-dir`, then `PERSONAL_CONTEXT_DIR`, then this repository's `context/` directory.
+
+### Using with Pi
+
+A Pi skill can invoke `personal-context get ...` as a local shell command and pass the plain Markdown output to an agent. This change supplies only that portable CLI layer; a shared Pi/Claude skill can be added separately later.
 
 ### Bootstrap from existing writing (optional)
 
@@ -86,7 +129,7 @@ A good approach: start a Claude Code session and ask it to interview you. Share 
 
 ### Connect to Claude Code
 
-The MCP server runs **entirely locally** — Claude Code spawns it as a subprocess on your machine, and it just reads markdown files from disk. No data is sent to external services beyond the normal Claude API calls.
+The existing FastMCP setup remains available for Claude Code and other MCP clients. The MCP server runs **entirely locally** — Claude Code spawns it as a subprocess on your machine, and it just reads markdown files from disk. No data is sent to external services beyond the normal Claude API calls.
 
 Register the server as a **user-scoped** MCP so it's available in every Claude Code session, regardless of which project you're working in:
 
@@ -157,7 +200,7 @@ Since `sources/private/` is gitignored, these files are device-specific — they
 
 `sources/private/` holds raw *source material* for ingest — it is **not** read by the MCP at runtime. If you have curated context that the MCP should serve but that must stay out of a public repo, put it in **`context/private.md`**, which is gitignored.
 
-The server globs `context/*.md`, so **any** gitignored file you add there (e.g. `context/private.md`, `context/travel.md`) is returned by `get_all_context()` and served locally, but git never commits it. Like `sources/private/`, these are device-specific — copy them manually (or symlink them from a private repo) if you run the MCP on another machine.
+The MCP server globs `context/*.md`, so **any** gitignored file you add there (e.g. `context/private.md`, `context/travel.md`) is returned by MCP's `get_all_context()` and served locally, preserving its existing behavior. The CLI is deliberately more conservative: `get --all` returns only the six public documents unless `--include-private` is supplied. Git never commits these extra files. Like `sources/private/`, they are device-specific — copy them manually (or symlink them from a private repo) if you run the MCP on another machine.
 
 Two things to know about this pattern:
 
@@ -203,8 +246,10 @@ personal-context/
 ├── scripts/
 │   └── ingest.py      # Bootstrap drafts from existing writing
 ├── drafts/            # Generated drafts from ingest (GITIGNORED)
-├── tests/             # Tests for ingest script and server
-├── server.py          # FastMCP MCP server
+├── personal_context/
+│   └── cli.py         # Local, standard-library CLI
+├── tests/             # Tests for CLI, ingest script, and server
+├── server.py          # FastMCP MCP server (unchanged interface)
 ├── pyproject.toml
 └── README.md
 ```
