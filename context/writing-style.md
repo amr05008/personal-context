@@ -1,6 +1,9 @@
 ---
-last_updated: 2026-08-01
+last_updated: 2026-11-07
 source_refs:
+  - blogs/what-it-costs-to-get-llms-to-produce-usable-work.md
+  - blogs/fable-flagged-my-airbnb-camera-scan-as-a-cybersecurity-risk.md
+  - blogs/getting-jevvy-with-it.md
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
   - blogs/Making-migrations-fun-with-Claude-Code.md
   - blogs/the-twisting-tale-of-our-handwriting-robots.md
@@ -52,7 +55,7 @@ Aaron writes in a **conversational, first-person voice** that reads like he's ta
 ## Structural Patterns
 
 - **Blog post structure**: personal hook → problem/context → what he built → how it works (with details) → what's next → links/resources
-- **Headers are descriptive, not clever.** "What GlutenOrNot Does," "The main event," "Why It's Free" — clear about what follows.
+- **Headers are descriptive, not clever.** "What GlutenOrNot Does," "The main event," "Why It's Free" — clear about what follows. Titles get more room to play ("Getting jevvy with it"), but the headers inside stay plain ("What is Jev?", "First impressions").
 - **Ends with forward-looking section.** Almost every post has a "What's Next" or "Helpful Resources" section.
 - **Heavy use of inline links** to tools, people, repos, and prior posts. The writing is densely linked.
 - **Images and screenshots** are used to show, not just tell. Captions are descriptive.
@@ -74,6 +77,19 @@ When the subject is his profession rather than a side project, a few extra moves
 - **Every section ends with a way in.** Each recommendation is followed by a concrete starter project and a link — the teaching-first, give-without-strings instinct applied section by section, not just at the end.
 - **Blunt judgments stay soft.** "If you say you are a builder and have no commits in the past 12 months on GitHub, that's a yellow flag." A yellow flag, not a dealbreaker.
 - **Closes with an open door, not a CTA.** "feel free to email me" — offering his own time is consistent with the no-engagement-bait rule below, not an exception to it.
+
+### Experiment and tool-test writeups
+When the post reports on testing models or a new tool (cost-per-turn, Jev), the narrative gives way to evidence:
+
+- **States the scale of the test up front.** "What follows are my observations after 309 model runs across four experiments and $45.71 in cold hard cash." Run counts, dollars, and dataset sizes come early, so the reader knows how much weight the findings can carry.
+- **Defines the bar before the results.** He says what "usable" means and that he's the judge of it, then sticks to it, even when the agent thought its run succeeded.
+- **Results go in tables; reactions go in prose.** Each experiment shows the exact prompt verbatim in code formatting and a results table (runs, spend, usable, $ per usable); most add a passing and a failing example as captioned screenshots; then comes what he made of it.
+- **A recurring verdict line.** Each section ends on the same bolded question ("**Would I recommend giving this task to models?**") with a direct answer: "Yes," "ABSOLUTELY," or a qualified "use it for the bones, write it by hand."
+- **Says what he expected, then whether he was right.** "I guessed before I ran the experiment on the local model it would score something like 9 out of 20 runs producing a usable result." Then the real number, and "Yeah, that's not good."
+- **Owns the flaws in his own method and his own product.** He names where the experiment was weak (too few runs, memory carrying over between sessions) and reports a bug the test turned up in GlutenOrNot instead of leaving it out.
+- **Ends on the takeaway and the repo.** A plain-language rule of thumb, then the public repo with the full prompts and results so anyone can rerun it.
+
+Short takes follow the same honesty in fewer words: the situation, the exact prompt, what happened, a sanity check against another model, then a firm but fair opinion that ends on what he hopes changes, not a complaint (the Fable network-scan post).
 
 ### Social posts (LinkedIn and similar)
 **Teach and give, don't ask for engagement.** Aaron does not want CTAs that invite the audience to comment, react, or "let him know what you think." His close is to hand over something genuinely useful — a repo people can try themselves, a stripped-down version of the deck he presented, or other resources — and let the value speak for itself. This give-without-strings approach reflects his teaching-first ethos and reliably earns engagement on its own without explicitly soliciting it. When drafting a social post, default the ending to "here's something useful, go try it" rather than a question or discussion prompt.
@@ -109,3 +125,8 @@ When the subject is his profession rather than a side project, a few extra moves
 > "**It's totally okay if you don't know how to do some of these items today.** You absolutely can learn them and be up to speed in no-time if you start exploring and experimenting. [...] We are all still figuring out how to adjust to this rapidly changing world."
 
 **Why this works:** After a post full of things the reader might not know how to do, the bolded reassurance arrives before they can feel behind. "We are all still figuring out" puts him in the same boat rather than above it — he's giving standards without making them a judgment. Then he hands over an ordered first step so "you can learn this" comes with somewhere to actually start.
+
+### Example 7: The lesson inside the data (experiment writeups)
+> "What was even more wild for Kimi K3 is that on 6 out of 20 runs it surfaced 5 action items, but the issue was that they were not the right action items. **Had I not reviewed these outputs myself and just relied on the quantity of action items surfaced, I would've missed these failing results.**"
+
+**Why this works:** The finding is specific (6 of 20 runs, 5 items, the wrong ones), and the bolded sentence turns it into a lesson anyone using models can apply. He doesn't say "always review AI output" in the abstract; he shows the exact moment where not reviewing would have burned him. The conversational "What was even more wild" keeps a results section from reading like a lab report.

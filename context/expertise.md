@@ -1,7 +1,10 @@
 ---
-last_updated: 2026-08-01
+last_updated: 2026-11-07
 source_refs:
   - blogs/what-i-look-for-in-product-managers-now.md
+  - blogs/what-it-costs-to-get-llms-to-produce-usable-work.md
+  - blogs/getting-jevvy-with-it.md
+  - blogs/fable-flagged-my-airbnb-camera-scan-as-a-cybersecurity-risk.md
   - blogs/building-products-age-of-ai.md
   - blogs/unlocking-revenue-with-product-led-growth.md
   - blogs/glutenornot-free-ingredient-scanner-celiac-disease.md
@@ -32,7 +35,10 @@ Active practitioner, not theorist. Uses AI tools daily for building:
 - MCP servers — built and open-sourced personal-context MCP (FastMCP), experimented with Strava MCP
 - Personal context systems — designed a bootstrap workflow (ingest blog posts → interview → refine) for building LLM context from existing writing
 - ChatGPT for personal productivity — recipes, travel planning, tech questions
-- Multi-model practice — Claude as the primary build model, with OpenRouter for rotating through and evaluating other frontier models (e.g. Kimi K3) off a single key
+- Multi-model practice — Claude as the primary build model, with OpenRouter for rotating through and evaluating other frontier models (e.g. Kimi K3) off a single key, and the Pi coding agent as a second harness alongside Claude Code
+- Model evaluation — designs small, repeatable experiments to decide which model is worth using for a task: scripted runs across models, harnesses, and effort levels, seeded checks (a deliberately wrong number in the source, a known set of action items), and every output graded by hand for "usable." Published as cost-per-turn (309 runs) and jev-sandbox (~1,000 food labels, 129 emails)
+- Decision/classifier models — tested TypeSafe's Jev, which returns probabilities rather than text, as a fast first pass in front of a frontier model
+- Agent-driven video work — built a Claude Code skill (ride-overlay) that uses HyperFrames to render FIT-file ride data onto action-cam footage
 - Skills — spotting repetitive workflows and building reusable skills to remove the friction (e.g. slack-later-triage, which enriches saved Slack messages and recommends what to handle, delegate, or drop)
 - Working through MCPs, APIs, and connectors instead of product web UIs — e.g. running GlutenOrNot's PostHog analytics and Sentry error monitoring without learning either dashboard
 - Vibe coding with Replit, Claude Code, and other tools
@@ -42,7 +48,7 @@ Active practitioner, not theorist. Uses AI tools daily for building:
 
 Teaching is how he explores a topic in depth, and it's become a practiced skill in its own right:
 - Long-form technical writeups at aaronroy.com — build narratives, tutorials, and advisory posts for product people
-- Hands-on video walkthroughs on YouTube (@aaron_wa) — showing how a thing gets built, end to end
+- Hands-on video walkthroughs and tool tests on YouTube (@aaron_wa) — showing how a thing gets built, end to end
 - Workshops and talks — a hands-on Manychat workshop on personal morning briefings, a session at NYU's Product Management Club on building products in the age of AI
 - Consistent instinct across all three: teach the transferable lesson and hand over the artifact (repo, deck, writeup) so someone can rebuild it themselves
 
@@ -90,3 +96,5 @@ Wrote practical guides on:
 - Two-factor authentication setup
 - Online scam prevention
 - Privacy protection for non-technical audiences
+
+Also runs his own defensive checks, e.g. scanning a rental's Wi-Fi for undisclosed cameras, and has written about AI model safeguards blocking that kind of basic defensive work.
