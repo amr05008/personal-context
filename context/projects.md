@@ -62,7 +62,7 @@ Public test benches for figuring out which model is worth using for a job:
 - **jev-sandbox** — tests of TypeSafe's Jev, a "System One" decision model that returns probabilities instead of text, against GlutenOrNot labels and email triage. Repo: github.com/amr05008/jev-sandbox · Blog: aaronroy.com/getting-jevvy-with-it/
 
 ### Monthly Finances
-Automated monthly finance pipeline: **SimpleFin Bridge → SQLite → Claude → Notion**. Runs unattended on macOS `launchd` schedules — a daily pull + LLM categorization (Claude Sonnet 4.6, with a forever merchant cache), a monthly report on the 1st that synthesizes spending insights (Claude Opus 4.8) into a Notion page, and a weekly healthcheck that catches stale/frozen bank feeds. Discord pings on failures. Replaced the legacy `tally.py` + CSV-drop workflow and has been the only pipeline since the May 2026 auto-run. Tracks category budgets, an emergency-fund target, and 529 contributions (sensitive config kept gitignored).
+A personal finance automation that runs unattended: it pulls account data on a schedule, uses an LLM to categorize spending, and produces a monthly summary. It's a very personal setup, so keep public mentions to that level of detail.
 
 ## Notable Past Projects
 

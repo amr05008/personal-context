@@ -86,7 +86,7 @@ Teachable experience gives insight into:
 Not an engineer, but builds and ships:
 - Astro static sites (aaronroy.com)
 - React Native mobile apps (GlutenOrNot)
-- Python scripts and automation (ingest tools, scheduled `launchd` pipelines with SQLite + LLM categorization, e.g. the SimpleFin → SQLite → Claude → Notion finance pipeline)
+- Python scripts and automation (ingest tools, scheduled pipelines with SQLite and LLM categorization)
 - Streamlit apps (fantasy Tour de France)
 - WordPress migrations, deployment (Vercel)
 
