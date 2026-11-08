@@ -10,7 +10,7 @@ Built the travel profile from the vault template (`~/repos/vault/templates/trave
 
 ## Changes
 
-- `context/travel.md` — the filled profile (GITIGNORED; now a **symlink** to `~/repos/vault/areas/travel/travel-profile.md`, canonical copy in the private vault repo for backup/sync)
+- `context/travel.md` — the filled profile (GITIGNORED; now a **symlink** to `~/repos/vault/resources/travel/travel-profile.md`, canonical copy in the private vault repo for backup/sync)
 - `docs/travel.example.md` — public placeholder example; deliberately outside `context/` because `get_all_context()` globs `context/*.md`
 - `.gitignore` — added `context/travel.md` and `.playwright-mcp/` (browser-test snapshots were landing in the working tree)
 - `README.md` — documented the gitignored-served-context pattern (symlinks, example placement, no account numbers)
